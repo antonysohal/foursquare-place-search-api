@@ -1,0 +1,45 @@
+export FOURSQUARE_CLIENT_ID='DNQRK3JCIVJ0MPEPYTDDWCQEUYML21PHOJXOHFQAYSKR1LZS'
+export FOURSQUARE_CLIENT_SECRET='N3LZGKDA5HWQVLHSLMW2ECQUXVSGDNQN2IBSK4AVU1THFKSJ'
+
+curl -X GET -G "https://api.foursquare.com/v2/venues/search" \
+    -d client_id="$FOURSQUARE_CLIENT_ID" \
+    -d client_secret="$FOURSQUARE_CLIENT_SECRET" \
+    -d v="20180323" \
+    -d query="Pizza%20Express" \
+    -d intent="browse" \
+    -d near="London" \
+    -d limit=10 \
+    | jq .
+
+
+curl -X GET -G "https://api.foursquare.com/v2/venues/search" \
+    -d client_id="$FOURSQUARE_CLIENT_ID" \
+    -d client_secret="$FOURSQUARE_CLIENT_SECRET" \
+    -d v="20180323" \
+    -d query="Pizza%20Express" \
+    -d intent="browse" \
+    -d near="UK" \
+    -d limit=10 \
+    | jq .
+
+
+curl -X GET -G 'https://api.foursquare.com/v2/venues/search' \
+    -d client_id="$FOURSQUARECLIENT_ID" \
+    -d client_secret="$FOURSQUARE_CLIENT_SECRET" \
+    -d v="20180323" \
+    -d query="Pizza Express" \
+    -d intent="browse" \
+    -d near="Chingford" \
+    -d limit=10  | jq .
+
+curl -X GET -G 'https://api.foursquare.com/v2/venues/4b4c5d86f964a5209cb126e3' \
+    -d client_id="$FOURSQUARE_CLIENT_ID" \
+    -d client_secret="$FOURSQUARE_CLIENT_SECRET" \
+    -d v="20180323"  | jq .
+
+curl -X GET -G 'https://api.foursquare.com/v2/venues/explore' \
+    -d client_id="FOURSQUARE_CLIENT_ID" \
+    -d client_secret="FOURSQUARE_CLIENT_SECRET" \
+    -d v="20180323" \
+    -d near="Cardiff" \
+    -d limit=15  | jq .

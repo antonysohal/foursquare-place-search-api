@@ -1,0 +1,10 @@
+app:
+  name: Four Sqaure Place by Name API
+spring:
+foursquare:
+  api:
+    endpoint: https://api.foursquare.com/v2
+    version: 20180323
+    client:
+      id: ${FOURSQUARE_CLIENT_ID}
+      secret: ${FOURSQUARE_CLIENT_SECRET}
